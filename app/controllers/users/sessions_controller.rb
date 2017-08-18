@@ -14,8 +14,7 @@ class Users::SessionsController < Devise::SessionsController
   def respond_with_authentication_token(resource)
     render json: {
       auth_token: resource.authentication_token,
-      email: resource.email,
-      name: resource.name
+      email: resource.email
     }
   end
 end
